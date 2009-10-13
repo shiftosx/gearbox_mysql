@@ -16,31 +16,17 @@
  */
 
 #import <Cocoa/Cocoa.h>
-#import "Gearbox.h"
-#import "mysql/include/mysql.h"
+#import <ShiftGearbox/ShiftGearbox.h>
+#import "../mysql/include/mysql.h"
 
-@interface MySQL : NSObject <Gearbox>{
-	IBOutlet NSView *editor;
-
-	IBOutlet NSTextField *name;
-	IBOutlet NSTextField *host;
-	IBOutlet NSTextField *user;
-	IBOutlet NSTextField *password;
-	IBOutlet NSTextField *database;
-	IBOutlet NSTextField *socket;
-	IBOutlet NSTextField *port;
-	
-	IBOutlet NSImageView *nameWarning;
-	IBOutlet NSImageView *hostWarning;
-	IBOutlet NSImageView *userWarning;
+@interface MySQL : GBServer{
 
 @protected
-	MYSQL               connection;
-    BOOL                connected;
-    NSStringEncoding    encoding;
-    unsigned int        connectionFlags;
+	MYSQL               mysqlConnection;
+    //NSStringEncoding    encoding;
+    //unsigned int        connectionFlags;
 }
 
-- (NSArray *) stringArrayFromResult:(MYSQL_RES *)result;
+@property (readonly) MYSQL mysqlConnection;
 
 @end

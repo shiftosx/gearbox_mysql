@@ -15,6 +15,10 @@
 		AB7B10E01066FF7A0015202F /* mysql_version.h.in in Resources */ = {isa = PBXBuildFile; fileRef = AB7B10C81066FF7A0015202F /* mysql_version.h.in */; };
 		AB7B10E11066FF7A0015202F /* libmysqlclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7B10DD1066FF7A0015202F /* libmysqlclient.a */; };
 		ABA0534C0E41590E00A791E1 /* MySQL.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA0534B0E41590E00A791E1 /* MySQL.m */; };
+		ABE2A804107A623C004F2E4A /* ShiftGearbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE2A803107A623C004F2E4A /* ShiftGearbox.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		ABE2A826107A63AA004F2E4A /* MySQLEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE2A825107A63AA004F2E4A /* MySQLEditor.m */; };
+		ABE2A82E107A642D004F2E4A /* MySQLSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE2A82D107A642D004F2E4A /* MySQLSchema.m */; };
+		ABE2A835107A654C004F2E4A /* MySQLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE2A834107A654C004F2E4A /* MySQLConnection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,10 +99,16 @@
 		AB7B10DA1066FF7A0015202F /* waiting_threads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = waiting_threads.h; sourceTree = "<group>"; };
 		AB7B10DB1066FF7A0015202F /* wqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wqueue.h; sourceTree = "<group>"; };
 		AB7B10DD1066FF7A0015202F /* libmysqlclient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmysqlclient.a; sourceTree = "<group>"; };
-		ABA0534A0E41590E00A791E1 /* MySQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySQL.h; sourceTree = "<group>"; };
-		ABA0534B0E41590E00A791E1 /* MySQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySQL.m; sourceTree = "<group>"; };
+		ABA0534A0E41590E00A791E1 /* MySQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySQL.h; path = Source/MySQL.h; sourceTree = "<group>"; };
+		ABA0534B0E41590E00A791E1 /* MySQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MySQL.m; path = Source/MySQL.m; sourceTree = "<group>"; };
 		ABA053510E415CE300A791E1 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Editor.xib; sourceTree = "<group>"; };
-		ABA05A010E450A0800A791E1 /* Gearbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gearbox.h; sourceTree = "<group>"; };
+		ABE2A803107A623C004F2E4A /* ShiftGearbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShiftGearbox.framework; path = Frameworks/ShiftGearbox.framework; sourceTree = "<group>"; };
+		ABE2A824107A63AA004F2E4A /* MySQLEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySQLEditor.h; path = Source/MySQLEditor.h; sourceTree = "<group>"; };
+		ABE2A825107A63AA004F2E4A /* MySQLEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MySQLEditor.m; path = Source/MySQLEditor.m; sourceTree = "<group>"; };
+		ABE2A82C107A642D004F2E4A /* MySQLSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySQLSchema.h; path = Source/MySQLSchema.h; sourceTree = "<group>"; };
+		ABE2A82D107A642D004F2E4A /* MySQLSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MySQLSchema.m; path = Source/MySQLSchema.m; sourceTree = "<group>"; };
+		ABE2A833107A654C004F2E4A /* MySQLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySQLConnection.h; path = Source/MySQLConnection.h; sourceTree = "<group>"; };
+		ABE2A834107A654C004F2E4A /* MySQLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MySQLConnection.m; path = Source/MySQLConnection.m; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +119,7 @@
 			files = (
 				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
 				AB7B10E11066FF7A0015202F /* libmysqlclient.a in Frameworks */,
+				ABE2A804107A623C004F2E4A /* ShiftGearbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,9 +161,14 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				ABA05A010E450A0800A791E1 /* Gearbox.h */,
 				ABA0534A0E41590E00A791E1 /* MySQL.h */,
 				ABA0534B0E41590E00A791E1 /* MySQL.m */,
+				ABE2A824107A63AA004F2E4A /* MySQLEditor.h */,
+				ABE2A825107A63AA004F2E4A /* MySQLEditor.m */,
+				ABE2A82C107A642D004F2E4A /* MySQLSchema.h */,
+				ABE2A82D107A642D004F2E4A /* MySQLSchema.m */,
+				ABE2A833107A654C004F2E4A /* MySQLConnection.h */,
+				ABE2A834107A654C004F2E4A /* MySQLConnection.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -160,6 +176,7 @@
 		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ABE2A803107A623C004F2E4A /* ShiftGearbox.framework */,
 				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -359,6 +376,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABA0534C0E41590E00A791E1 /* MySQL.m in Sources */,
+				ABE2A826107A63AA004F2E4A /* MySQLEditor.m in Sources */,
+				ABE2A82E107A642D004F2E4A /* MySQLSchema.m in Sources */,
+				ABE2A835107A654C004F2E4A /* MySQLConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +412,10 @@
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../shift/PlugIns/";
 				COPYING_PRESERVES_HFS_DATA = YES;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -415,6 +439,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MySQL_Prefix.pch;
